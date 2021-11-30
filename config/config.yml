@@ -1,0 +1,6 @@
+app:
+  filePath: "../test/employees.csv"
+  delimiter: ";"
+  timeoutRequest: 10
+  countGoroutines: 10
+  logLevel: -1
