@@ -2,13 +2,14 @@ package config
 
 import (
 	"flag"
-	"github.com/kkyr/fig"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
 	"log"
 	"os"
 	"path/filepath"
 	"time"
+
+	"github.com/kkyr/fig"
+	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 const (
@@ -22,6 +23,7 @@ type Config struct {
 	App struct {
 		FilePath        string        `fig:"filePath" default:"../test/employees.csv"` // path to CSV file
 		Delimiter       string        `fig:"delimiter" default:";"`                    // delimiter in CSV file
+		Comment         string        `fig:"comment" default:"#"`                      // delimiter in CSV file
 		TimeoutRequest  time.Duration `fig:"timeoutRequest" default:"10"`              // request timeout in seconds
 		CountGoroutines int           `fig:"countGoroutines" default:"10"`             // count of goroutines
 		Logger          *zap.Logger   // logger for use, don't load from configuration file

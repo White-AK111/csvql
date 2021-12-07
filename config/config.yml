@@ -1,6 +1,7 @@
 app:
   filePath: "../test/employees.csv"
   delimiter: ";"
+  comment: "#"
   timeoutRequest: 10
   countGoroutines: 10
   logLevel: -1
